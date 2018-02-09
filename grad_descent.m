@@ -10,7 +10,8 @@ Py = (rand(NUM_AGENTS,1)-0.5).*10;
 %[m, n] = size(p);
 
 
-cost = EllipsoidCostFunction(0.4, 2);
+% cost = EllipsoidCostFunction(0.4, 2);
+cost = Figure16CostFunction();
 
 x = linspace(-5, 5, 20);
 y = linspace(-5, 5, 20);
