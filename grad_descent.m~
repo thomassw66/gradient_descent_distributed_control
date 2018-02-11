@@ -12,11 +12,10 @@ for i=1:NUM_AGENTS
     agents = cat(1, agents, a);
 end
 
-% visualize the cost function 
 x = linspace(-5, 5, 20);
 y = linspace(-5, 5, 20);
 [X, Y] = meshgrid(x,y);
-Z = cost.calculate_cost_fn(X, Y);
+Z = cost.calculate_cost_fn(X
 
 % control loop 
 for i=0:MAX_TIME 
@@ -24,7 +23,8 @@ for i=0:MAX_TIME
     hold on
     contour(X, Y, Z, 20);
     for j=1:NUM_AGENTS
-        agents(j).plt();
+        p = agents(j).getLocation();
+        plot(p(1), p(2), 'or', 'MarkerSize', 5, 'MarkerFaceColor', 'r');
         agents(j).act();
     end 
     hold off

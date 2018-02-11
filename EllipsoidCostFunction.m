@@ -20,7 +20,7 @@ classdef EllipsoidCostFunction
             % grad = (1/a^2) 2x dx + (1/b^2) 2y dy = dz 
              gx = x.*(1/obj.a^2)*2;
              gy = y.*(1/obj.b^2)*2;
-             res = [gx, gy]
+             res = [gx, gy];
          end
      end
 
